@@ -21,8 +21,13 @@ jobs:
           yq -i '.spec.nodePools[] |= (select(.component == "data") .replicas += 1)' cluster1.yaml
 
       - name: Commit and push changes
+        env:
+          GH_TOKEN: ${{ secrets.GH_PAT }}
         run: |
           git config user.name "GitHub Action"
           git config user.email "action@github.com"
+          git remote set-url origin https://x-access-token:${GH_TOKEN}@github.com/${{ github.repository }}
+          git add cluster1.yaml
           git commit -am "🔁 Auto-scale OpenSearch data node replicas"
           git push
+
