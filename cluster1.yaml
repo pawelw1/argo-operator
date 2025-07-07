@@ -7,11 +7,11 @@ spec:
   security:
     config:
     tls:
-       http:
-         generate: true
-       transport:
-         generate: true
-         perNode: true
+      http:
+        generate: true
+      transport:
+        generate: true
+        perNode: true
   general:
     httpPort: 9200
     serviceName: my-first-cluster
@@ -29,39 +29,38 @@ spec:
     replicas: 1
     resources:
       requests:
-         memory: "512Mi"
-         cpu: "200m"
+        memory: "512Mi"
+        cpu: "200m"
       limits:
-         memory: "512Mi"
-         cpu: "200m"
+        memory: "512Mi"
+        cpu: "200m"
   nodePools:
     - component: masters
       replicas: 3
       resources:
-         requests:
-            memory: "2Gi"
-            cpu: "1000m"
-         limits:
-            memory: "2Gi"
-            cpu: "1000m"
+        requests:
+          memory: "2Gi"
+          cpu: "1000m"
+        limits:
+          memory: "2Gi"
+          cpu: "1000m"
       roles:
         - "cluster_manager"
       persistence:
         emptyDir: {}
     - component: data
-      replicas: 1
+      replicas: 2
       resources:
-         requests:
-            memory: "2Gi"
-            cpu: "1000m"
-         limits:
-            memory: "2Gi"
-            cpu: "1000m"
+        requests:
+          memory: "2Gi"
+          cpu: "1000m"
+        limits:
+          memory: "2Gi"
+          cpu: "1000m"
       roles:
         - "data"
       persistence:
         pvc:
-         storageClass: managed-nfs-storage
-         accessModes:
-          - ReadWriteOnce
-          
+          storageClass: managed-nfs-storage
+          accessModes:
+            - ReadWriteOnce
