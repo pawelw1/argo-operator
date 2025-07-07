@@ -18,7 +18,7 @@ jobs:
       - name: Increase data node replicas
         run: |
           echo "Increasing data node replicas in cluster.yml"
-          yq -i '.spec.nodePools[] |= (select(.component == "data") .replicas += 1)' cluster.yml
+          yq -i '.spec.nodePools[] |= (select(.component == "data") .replicas -= 1)' cluster.yml
 
       - name: Commit and push changes
         env:
