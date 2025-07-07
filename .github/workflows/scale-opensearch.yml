@@ -1,0 +1,28 @@
+name: Scale OpenSearch Cluster
+
+on:
+  workflow_dispatch:  # allows manual trigger from GitHub UI
+
+jobs:
+  scale:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Install yq
+        run: |
+          sudo snap install yq
+
+      - name: Increase data node replicas
+        run: |
+          echo "Increasing data node replicas in cluster.yml"
+          yq -i '.spec.nodePools[] |= (select(.component == "data") .replicas += 1)' cluster.yml
+
+      - name: Commit and push changes
+        run: |
+          git config user.name "GitHub Action"
+          git config user.email "action@github.com"
+          git commit -am "🔁 Auto-scale OpenSearch data node replicas"
+          git push
