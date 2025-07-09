@@ -15,8 +15,8 @@ spec:
   general:
     httpPort: 9200
     serviceName: my-first-cluster
-    version: "3"
-    pluginsList: ["repository-s3"]
+    version: "2.19.1"
+    pluginsList: ["repository-s3","https://github.com/Virtimo/prometheus-exporter-plugin-for-opensearch/releases/download/v2.19.1/prometheus-exporter-2.19.1.0.zip"]
     drainDataNodes: true
   dashboards:
     service:
@@ -24,7 +24,7 @@ spec:
     tls:
       enable: true
       generate: true
-    version: 3.0.0-alpha1
+    version: 2.19.1
     enable: true
     replicas: 1
     resources:
