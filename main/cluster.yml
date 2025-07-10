@@ -24,7 +24,8 @@ spec:
         monitoring: prometheus
       scrapeInterval: 30s # The scrape interval for Prometheus
       pluginUrl: https://github.com/Virtimo/prometheus-exporter-plugin-for-opensearch/releases/download/v2.19.1/prometheus-exporter-2.19.1.0.zip
-   
+      tlsConfig:
+        insecureSkipVerify: true
   dashboards:
     service:
       type: NodePort
