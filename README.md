@@ -2,17 +2,17 @@ This OpenSearch Operator autoscaling demo will include the following configs
 
 1. [GitHub/GitLab repository](#githubgitlab-repository)
 2. k8s cluster - for demo will use Docker Desktop k8s
-3. [[#ArgoCD]]
-4. [[#OpenSearch Operator]]
+3. [ArgoCD](#argocd)
+4. [OpenSearch Operator](#opensearch-operator)
 5. OpenSearch cluster manifest 
 6. OpenSearch Prometheus exporter
-7. Prometheus operator [[#Monitoring]]
-8. Grafana [[#Monitoring]]
-9. Alertmanager [[#Monitoring]]
-10. [[#Alert Manager]]
-11. [[#ArgoEvents]]
-12. [[#Argo Workflows]]
-13. [[#Manual testing]]
+7. Prometheus operator [Monitoring](#monitoring)
+8. Grafana [Monitoring](#monitoring)
+9. Alertmanager [Monitoring](#monitoring)
+10. [Alert Manager](#alert-manager)
+11. [ArgoEvents](#argoevents)
+12. [Argo Workflows](#argo-workflows)
+13. [Manual testing](#manual-testing)
 
 ### GitHub/GitLab repository 
 
@@ -142,13 +142,14 @@ argocd login localhost:<argocd-server_service_port> --username admin --password 
 ### OpenSearch Operator
 
 1. Install OpenSearch Operator with ArgoCD 
-   ![[Pasted image 20250719020058.png]]
+<img width="738" height="413" alt="Pasted image 20250719020058" src="https://github.com/user-attachments/assets/1ab2ac72-ea47-4448-ba37-fdaf238d8ab1" />
 
 
 ### Opensearch Cluster 
 
 1. Create OpenSearch cluster using OpenSearchCluster manifest from Gitlab 
-   ![[Pasted image 20250719020249.png]]
+   <img width="771" height="463" alt="Pasted image 20250719020249" src="https://github.com/user-attachments/assets/cc165087-943a-4f55-bfe9-7bee5b4774a9" />
+
 ### Monitoring
 
 1. Clone argo-operator repo from local gitlab to install Prometheus Operator
@@ -168,7 +169,8 @@ kubectl create ns monitoring
 ```
 
 4. Create Monitoring App with ArgoCD 
-   ![[Pasted image 20250719015803.png]]
+   <img width="788" height="487" alt="Pasted image 20250719015803" src="https://github.com/user-attachments/assets/64d563cf-4833-46df-a677-260acb133a72" />
+
 ### Argo Events and Workflows Service Account 
 
 1. Create roles and rolebinding for Service Account argo and argo-workflows
