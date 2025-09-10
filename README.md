@@ -1,7 +1,11 @@
-This OpenSearch Operator autoscaling demo will include the following configs
+The manual below describes the installation of the components required to run autoscaling of the OpenSearch cluster nodes. 
+
+<img width="1209" height="776" alt="image" src="https://github.com/user-attachments/assets/07395228-2bfb-4a18-be0f-fc2797454ac1" />
+
+
 
 1. [GitHub/GitLab repository](#githubgitlab-repository)
-2. k8s cluster - for demo will use Docker Desktop k8s
+2. k8s cluster - for demo, will use Docker Desktop k8s (tested with k3 and k8s-Ubuntu)
 3. [ArgoCD](#argocd)
 4. [OpenSearch Operator](#opensearch-operator)
 5. OpenSearch cluster manifest 
