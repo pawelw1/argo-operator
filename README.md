@@ -1,4 +1,6 @@
-The manual below describes the installation of the components required to run autoscaling of the OpenSearch cluster nodes. 
+##Autoscaling of the OpenSearch cluster nodes
+
+This manual describes the installation of the components required to run autoscaling of the OpenSearch cluster nodes. 
 
 <img width="1209" height="776" alt="image" src="https://github.com/user-attachments/assets/07395228-2bfb-4a18-be0f-fc2797454ac1" />
 
