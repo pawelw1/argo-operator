@@ -1,6 +1,6 @@
 This OpenSearch Operator autoscaling demo will include the following configs
 
-1. [[#GitHub/GitLab repository]]
+1. [GitHub/GitLab repository](#githubgitlab-repository)
 2. k8s cluster - for demo will use Docker Desktop k8s
 3. [[#ArgoCD]]
 4. [[#OpenSearch Operator]]
