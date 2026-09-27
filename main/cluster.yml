@@ -57,7 +57,7 @@ spec:
       persistence:
         emptyDir: {}
     - component: data
-      replicas: 1
+      replicas: 2
       resources:
         requests:
           memory: "2Gi"
