@@ -67,6 +67,5 @@ spec:
         - "data"
       persistence:
         pvc:
-          storageClass: managed-nfs-storage
           accessModes:
             - ReadWriteOnce
