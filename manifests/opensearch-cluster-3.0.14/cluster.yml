@@ -1,7 +1,7 @@
 apiVersion: opensearch.org/v1
 kind: OpenSearchCluster
 metadata:
-  name: my-cluster
+  name: my-first-cluster
   namespace: default
 spec:
   security:
