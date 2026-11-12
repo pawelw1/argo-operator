@@ -1,0 +1,13 @@
+apiVersion: opensearch.org/v1
+kind: OpensearchUser
+metadata:
+  name: sample-user1
+  namespace: default
+spec:
+  opensearchCluster:
+    name: my-first-cluster
+  passwordFrom:
+    name: sample-user-password
+    key: password
+  backendRoles:
+    - kibanauser
